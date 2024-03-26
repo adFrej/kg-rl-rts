@@ -1,0 +1,3 @@
+[submodule "MicroRTS-Py"]
+	path = MicroRTS-Py
+	url = https://github.com/adFrej/MicroRTS-Py-KG.git
