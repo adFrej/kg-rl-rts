@@ -1,0 +1,4 @@
+added preprocessing
+added bidirectional relations to main node
+added graph files
+removed type keyword
