@@ -51,7 +51,7 @@ class Scorer:
         return scores
 
     def average_scores(self) -> 'Scorer':
-        for group in set([score.group for score in self.scores]):
+        for group in dict.fromkeys([score.group for score in self.scores]).keys():
             scores = self.get_group(group)
             result = pd.concat([score.score_df for score in scores])
             result = result.groupby("time").mean().reset_index()
@@ -69,7 +69,7 @@ class Scorer:
                 df = score
             else:
                 df = pd.merge(df, score, on="time", how="outer")
-        df.plot(x="time", y=[group for group in self.scores_avg.keys()], title=title)
+        df.plot(x="time", y=[group for group in self.scores_avg.keys()], color={k: f"C{i}" for i, k in enumerate(self.scores_avg.keys())}, title=title)
         if len(self.scores_avg) == 1:
             plt.legend([])
         else:
