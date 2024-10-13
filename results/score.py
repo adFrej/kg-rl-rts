@@ -68,7 +68,8 @@ class Scorer:
             if df is None:
                 df = score
             else:
-                df = pd.merge(df, score, on="time", how="outer")
+                df = pd.merge(df, score, on="time", how="outer", sort=True)
+                df = df.fillna((df.ffill() + df.bfill()) / 2)
         df.plot(x="time", y=[group for group in self.scores_avg.keys()], color={k: f"C{i}" for i, k in enumerate(self.scores_avg.keys())}, title=title)
         if len(self.scores_avg) == 1:
             plt.legend([])
