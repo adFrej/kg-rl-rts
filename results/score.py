@@ -43,6 +43,13 @@ class Scorer:
             self.add_score(experiment, group, **score_kwargs)
         return self
 
+    def add_all_scores_dir(self, directory: str, group: str, experiments_path=os.path.join(".", "..", "final_results"), **score_kwargs) -> 'Scorer':
+        score_kwargs["directory"] = directory
+        score_kwargs["experiments_path"] = experiments_path
+        for experiment in os.listdir(os.path.join(experiments_path, directory, "runs")):
+            self.add_score(experiment, group, **score_kwargs)
+        return self
+
     def get_group(self, group: str) -> list['Scorer.Score']:
         scores = []
         for score in self.scores:
@@ -58,7 +65,7 @@ class Scorer:
             self.scores_avg[group] = result
         return self
 
-    def draw_avg(self, title: str, step_limit: float = None, x_line: float = None, file: str = None, file_dir="plots") -> 'Scorer':
+    def draw_avg(self, title: str, step_limit: float = None, x_line: float = None, y_line: float = None, file: str = None, file_dir="plots") -> 'Scorer':
         self.average_scores()
         df = None
         for group, score in self.scores_avg.items():
@@ -78,6 +85,9 @@ class Scorer:
         if x_line is not None:
             plt.axvline(x=x_line, color='black')
             plt.xticks(list(plt.xticks()[0][1:-1]) + [x_line])
+        if y_line is not None:
+            plt.axhline(y=y_line, color='black')
+            plt.yticks(list(plt.yticks()[0][1:-1]) + [y_line])
         plt.ylabel(self.metric + " metric")
         plt.xlabel("training step")
         plt.grid()
