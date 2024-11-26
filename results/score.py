@@ -57,11 +57,25 @@ class Scorer:
                 scores.append(score)
         return scores
 
+    def _generate_times(self):
+        times = []
+        for score in self.scores:
+            times += list(score.score_df["time"])
+        self.times = pd.DataFrame({"time": sorted(list(set(times)))})
+
+    def _interpolate_score(self, score: pd.DataFrame) -> pd.DataFrame:
+        score = pd.merge(self.times, score, on="time", how="outer", sort=True)
+        score.index = score["time"]
+        score = score.interpolate(method="index")
+        score = score.reset_index(drop=True)
+        return score
+
     def average_scores(self) -> 'Scorer':
+        self._generate_times()
         for group in dict.fromkeys([score.group for score in self.scores]).keys():
             scores = self.get_group(group)
-            result = pd.concat([score.score_df for score in scores])
-            result = result.groupby("time").mean().reset_index()
+            result = pd.concat([self._interpolate_score(score.score_df) for score in scores])
+            result = result.groupby("time", sort=True).mean().reset_index()
             self.scores_avg[group] = result
         return self
 
@@ -76,12 +90,14 @@ class Scorer:
                 df = score
             else:
                 df = pd.merge(df, score, on="time", how="outer", sort=True)
-                df = df.fillna((df.ffill() + df.bfill()) / 2)
+                if df.isnull().values.any():
+                    raise ValueError("Missing values in scores detected. Probably interpolation failed.")
+                # df = df.fillna((df.ffill() + df.bfill()) / 2)
         df.plot(x="time", y=[group for group in self.scores_avg.keys()], color={k: f"C{i}" for i, k in enumerate(self.scores_avg.keys())}, title=title)
         if len(self.scores_avg) == 1:
             plt.legend([])
-        else:
-            plt.legend(loc='upper left')
+        # else:
+        #     plt.legend(loc='lower right', bbox_to_anchor=(1.3, 0.03))
         if x_line is not None:
             plt.axvline(x=x_line, color='black')
             plt.xticks(list(plt.xticks()[0][1:-1]) + [x_line])
