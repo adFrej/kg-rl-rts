@@ -1,0 +1,1200 @@
+<http://microrts.com/game/action/4>
+        a       <http://microrts.com/game/action/Action>;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "produces a unit in the specified direction";
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "produce";
+        <http://microrts.com/game/action/creates>
+                <http://microrts.com/game/unit/6> , <http://microrts.com/game/unit/1> , <http://microrts.com/game/unit/5> , <http://microrts.com/game/unit/4> , <http://microrts.com/game/unit/3> , <http://microrts.com/game/unit/2>;
+        <http://microrts.com/game/action/describedByInCreates>
+                <http://microrts.com/game/rating/costGood> , <http://microrts.com/game/rating/produceTimeBad> , <http://microrts.com/game/rating/costBad> , <http://microrts.com/game/rating/produceTimeGood>;
+        <http://microrts.com/game/action/doneBy>
+                <http://microrts.com/game/unit/2> , <http://microrts.com/game/unit/1> , <http://microrts.com/game/unit/3>;
+        <http://microrts.com/game/action/includedBy>
+                <http://microrts.com/game/mainGame>;
+        <http://microrts.com/game/action/prefers>
+                [ <http://microrts.com/game/action/in>
+                          "self";
+                  <http://microrts.com/game/action/statistic>
+                          "unit";
+                  <http://microrts.com/game/action/value>
+                          <http://microrts.com/game/unit/1>;
+                  <http://microrts.com/game/action/weight>
+                          "-3.0"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/action/prefers>
+                [ <http://microrts.com/game/action/in>
+                          "self";
+                  <http://microrts.com/game/action/statistic>
+                          "unit";
+                  <http://microrts.com/game/action/value>
+                          <http://microrts.com/game/unit/2>;
+                  <http://microrts.com/game/action/weight>
+                          "-3.0"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/action/targetsDistance>
+                "adjacent";
+        <http://microrts.com/game/action/targetsPlayer>
+                "empty" .
+
+<http://microrts.com/game/rating/returnTimeMedium>
+        a       <http://microrts.com/game/rating/Rating>;
+        <http://microrts.com/game/rating/describes>
+                <http://microrts.com/game/action/3>;
+        <http://microrts.com/game/rating/rankedBy>
+                <http://microrts.com/game/unit/3> .
+
+<http://microrts.com/game/rating/hpBad>
+        a       <http://microrts.com/game/rating/Rating>;
+        <http://microrts.com/game/rating/rankedBy>
+                <http://microrts.com/game/unit/6> , <http://microrts.com/game/unit/3> .
+
+<http://microrts.com/game/unit/2>
+        a       <http://microrts.com/game/unit/Unit>;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Barracks";
+        <http://microrts.com/game/unit/aimsAt>
+                [ <http://microrts.com/game/unit/priority>
+                          "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                  <http://microrts.com/game/unit/relation>
+                          "enemy";
+                  <http://microrts.com/game/unit/unit>
+                          <http://microrts.com/game/unit/1>;
+                  <http://microrts.com/game/unit/weight>
+                          "1.0"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/aimsAt>
+                [ <http://microrts.com/game/unit/priority>
+                          "0"^^<http://www.w3.org/2001/XMLSchema#long>;
+                  <http://microrts.com/game/unit/range>
+                          "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                  <http://microrts.com/game/unit/relation>
+                          "friendly";
+                  <http://microrts.com/game/unit/unit>
+                          <http://microrts.com/game/unit/1>;
+                  <http://microrts.com/game/unit/weight>
+                          "-5.0"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/aimsAt>
+                [ <http://microrts.com/game/unit/priority>
+                          "1"^^<http://www.w3.org/2001/XMLSchema#long>;
+                  <http://microrts.com/game/unit/range>
+                          "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                  <http://microrts.com/game/unit/relation>
+                          "neutral";
+                  <http://microrts.com/game/unit/unit>
+                          <http://microrts.com/game/unit/0>;
+                  <http://microrts.com/game/unit/weight>
+                          "-5.0"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/createdBy>
+                <http://microrts.com/game/action/4>;
+        <http://microrts.com/game/unit/does>
+                <http://microrts.com/game/action/4> , <http://microrts.com/game/action/0>;
+        <http://microrts.com/game/unit/hasCost>
+                "5"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasHp>
+                "4"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasProduceTime>
+                "200"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/includedBy>
+                <http://microrts.com/game/mainGame>;
+        <http://microrts.com/game/unit/isResource>
+                false;
+        <http://microrts.com/game/unit/isStockpile>
+                false;
+        <http://microrts.com/game/unit/prefers>
+                [ <http://microrts.com/game/unit/fraction>
+                          "0.1"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/how>
+                          "below";
+                  <http://microrts.com/game/unit/relation>
+                          "friendly";
+                  <http://microrts.com/game/unit/reverseWeight>
+                          "0.0"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/unit>
+                          <http://microrts.com/game/unit/5>;
+                  <http://microrts.com/game/unit/weight>
+                          "0.3"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/prefers>
+                [ <http://microrts.com/game/unit/fraction>
+                          "0.1"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/how>
+                          "below";
+                  <http://microrts.com/game/unit/relation>
+                          "friendly";
+                  <http://microrts.com/game/unit/reverseWeight>
+                          "0.0"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/unit>
+                          <http://microrts.com/game/unit/4>;
+                  <http://microrts.com/game/unit/weight>
+                          "0.3"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/prefers>
+                [ <http://microrts.com/game/unit/fraction>
+                          "0.1"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/how>
+                          "below";
+                  <http://microrts.com/game/unit/relation>
+                          "friendly";
+                  <http://microrts.com/game/unit/reverseWeight>
+                          "0.0"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/unit>
+                          <http://microrts.com/game/unit/6>;
+                  <http://microrts.com/game/unit/weight>
+                          "0.3"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/prefers>
+                [ <http://microrts.com/game/unit/fraction>
+                          "0.0"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/how>
+                          "below";
+                  <http://microrts.com/game/unit/relation>
+                          "friendly";
+                  <http://microrts.com/game/unit/reverseWeight>
+                          "1.0"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/unit>
+                          <http://microrts.com/game/unit/2>;
+                  <http://microrts.com/game/unit/weight>
+                          "2.0"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/producedBy>
+                <http://microrts.com/game/unit/3>;
+        <http://microrts.com/game/unit/produces>
+                <http://microrts.com/game/unit/5> , <http://microrts.com/game/unit/6> , <http://microrts.com/game/unit/4>;
+        <http://microrts.com/game/unit/ranks>
+                <http://microrts.com/game/rating/costBad> , <http://microrts.com/game/rating/hpMedium> , <http://microrts.com/game/rating/produceTimeBad>;
+        <http://microrts.com/game/unit/targetedBy>
+                <http://microrts.com/game/action/5> .
+
+<http://microrts.com/game/rating/produceTimeGood>
+        a       <http://microrts.com/game/rating/Rating>;
+        <http://microrts.com/game/rating/describesInCreatedBy>
+                <http://microrts.com/game/action/4>;
+        <http://microrts.com/game/rating/rankedBy>
+                <http://microrts.com/game/unit/6> , <http://microrts.com/game/unit/4> , <http://microrts.com/game/unit/3> .
+
+<http://microrts.com/game/action/1>
+        a       <http://microrts.com/game/action/Action>;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "moves the unit in the specified direction";
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "move";
+        <http://microrts.com/game/action/describedBy>
+                <http://microrts.com/game/rating/moveTimeBad> , <http://microrts.com/game/rating/moveTimeGood>;
+        <http://microrts.com/game/action/doneBy>
+                <http://microrts.com/game/unit/5> , <http://microrts.com/game/unit/3> , <http://microrts.com/game/unit/6> , <http://microrts.com/game/unit/4>;
+        <http://microrts.com/game/action/includedBy>
+                <http://microrts.com/game/mainGame>;
+        <http://microrts.com/game/action/prefers>
+                [ <http://microrts.com/game/action/in>
+                          "enemy";
+                  <http://microrts.com/game/action/statistic>
+                          "action";
+                  <http://microrts.com/game/action/value>
+                          <http://microrts.com/game/action/5>;
+                  <http://microrts.com/game/action/weight>
+                          "0.2"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/action/prefers>
+                [ <http://microrts.com/game/action/in>
+                          "self";
+                  <http://microrts.com/game/action/statistic>
+                          "resources";
+                  <http://microrts.com/game/action/value>
+                          "high";
+                  <http://microrts.com/game/action/weight>
+                          "1.0"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/action/prefers>
+                [ <http://microrts.com/game/action/in>
+                          "self";
+                  <http://microrts.com/game/action/statistic>
+                          "hp";
+                  <http://microrts.com/game/action/value>
+                          "low";
+                  <http://microrts.com/game/action/weight>
+                          "0.2"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/action/targetsDistance>
+                "adjacent";
+        <http://microrts.com/game/action/targetsPlayer>
+                "empty" .
+
+<http://microrts.com/game/rating/hpGood>
+        a       <http://microrts.com/game/rating/Rating>;
+        <http://microrts.com/game/rating/rankedBy>
+                <http://microrts.com/game/unit/1> .
+
+<http://microrts.com/game/rating/minDamageMedium>
+        a       <http://microrts.com/game/rating/Rating>;
+        <http://microrts.com/game/rating/describes>
+                <http://microrts.com/game/action/5>;
+        <http://microrts.com/game/rating/rankedBy>
+                <http://microrts.com/game/unit/4> .
+
+<http://microrts.com/game/unit/4>
+        a       <http://microrts.com/game/unit/Unit>;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Light";
+        <http://microrts.com/game/unit/aimsAt>
+                [ <http://microrts.com/game/unit/priority>
+                          "0"^^<http://www.w3.org/2001/XMLSchema#long>;
+                  <http://microrts.com/game/unit/range>
+                          "4"^^<http://www.w3.org/2001/XMLSchema#long>;
+                  <http://microrts.com/game/unit/relation>
+                          "enemy";
+                  <http://microrts.com/game/unit/weight>
+                          "5.0"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/aimsAt>
+                [ <http://microrts.com/game/unit/priority>
+                          "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                  <http://microrts.com/game/unit/relation>
+                          "enemy";
+                  <http://microrts.com/game/unit/weight>
+                          "3.0"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/aimsAt>
+                [ <http://microrts.com/game/unit/priority>
+                          "1"^^<http://www.w3.org/2001/XMLSchema#long>;
+                  <http://microrts.com/game/unit/relation>
+                          "enemy";
+                  <http://microrts.com/game/unit/unit>
+                          <http://microrts.com/game/unit/1>;
+                  <http://microrts.com/game/unit/weight>
+                          "3.5"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/createdBy>
+                <http://microrts.com/game/action/4>;
+        <http://microrts.com/game/unit/does>
+                <http://microrts.com/game/action/1> , <http://microrts.com/game/action/5> , <http://microrts.com/game/action/0>;
+        <http://microrts.com/game/unit/hasAttackRange>
+                "1"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasAttackTime>
+                "5"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasCost>
+                "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasHp>
+                "4"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasMaxDamage>
+                "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasMinDamage>
+                "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasMoveTime>
+                "8"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasProduceTime>
+                "80"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/includedBy>
+                <http://microrts.com/game/mainGame>;
+        <http://microrts.com/game/unit/isResource>
+                false;
+        <http://microrts.com/game/unit/isStockpile>
+                false;
+        <http://microrts.com/game/unit/prefers>
+                [ <http://microrts.com/game/unit/fraction>
+                          "0.15"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/how>
+                          "over";
+                  <http://microrts.com/game/unit/relation>
+                          "enemy";
+                  <http://microrts.com/game/unit/reverseWeight>
+                          "0.0"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/unit>
+                          <http://microrts.com/game/unit/6>;
+                  <http://microrts.com/game/unit/weight>
+                          "0.5"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/prefers>
+                [ <http://microrts.com/game/unit/fraction>
+                          "0.1"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/how>
+                          "below";
+                  <http://microrts.com/game/unit/relation>
+                          "friendly";
+                  <http://microrts.com/game/unit/reverseWeight>
+                          "0.0"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/unit>
+                          <http://microrts.com/game/unit/4>;
+                  <http://microrts.com/game/unit/weight>
+                          "0.5"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/prefers>
+                [ <http://microrts.com/game/unit/fraction>
+                          "0.5"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/how>
+                          "over";
+                  <http://microrts.com/game/unit/relation>
+                          "enemy";
+                  <http://microrts.com/game/unit/reverseWeight>
+                          "0.0"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/unit>
+                          <http://microrts.com/game/unit/3>;
+                  <http://microrts.com/game/unit/weight>
+                          "0.8"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/producedBy>
+                <http://microrts.com/game/unit/2>;
+        <http://microrts.com/game/unit/ranks>
+                <http://microrts.com/game/rating/attackTimeMedium> , <http://microrts.com/game/rating/hpMedium> , <http://microrts.com/game/rating/maxDamageMedium> , <http://microrts.com/game/rating/moveTimeGood> , <http://microrts.com/game/rating/costGood> , <http://microrts.com/game/rating/attackRangeBad> , <http://microrts.com/game/rating/minDamageMedium> , <http://microrts.com/game/rating/produceTimeGood>;
+        <http://microrts.com/game/unit/targetedBy>
+                <http://microrts.com/game/action/5> .
+
+<http://microrts.com/game/rating/hpMedium>
+        a       <http://microrts.com/game/rating/Rating>;
+        <http://microrts.com/game/rating/rankedBy>
+                <http://microrts.com/game/unit/5> , <http://microrts.com/game/unit/4> , <http://microrts.com/game/unit/2> .
+
+<http://microrts.com/game/rating/attackRangeGood>
+        a       <http://microrts.com/game/rating/Rating>;
+        <http://microrts.com/game/rating/describes>
+                <http://microrts.com/game/action/5>;
+        <http://microrts.com/game/rating/rankedBy>
+                <http://microrts.com/game/unit/6> .
+
+<http://microrts.com/game/action/3>
+        a       <http://microrts.com/game/action/Action>;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "returns to base with a resource";
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "return";
+        <http://microrts.com/game/action/describedBy>
+                <http://microrts.com/game/rating/returnTimeMedium>;
+        <http://microrts.com/game/action/doneBy>
+                <http://microrts.com/game/unit/3>;
+        <http://microrts.com/game/action/includedBy>
+                <http://microrts.com/game/mainGame>;
+        <http://microrts.com/game/action/needs>
+                [ <http://microrts.com/game/action/in>
+                          "self";
+                  <http://microrts.com/game/action/statistic>
+                          "resources";
+                  <http://microrts.com/game/action/value>
+                          "high"
+                ];
+        <http://microrts.com/game/action/prefers>
+                [ <http://microrts.com/game/action/in>
+                          "self";
+                  <http://microrts.com/game/action/statistic>
+                          "resources";
+                  <http://microrts.com/game/action/value>
+                          "high";
+                  <http://microrts.com/game/action/weight>
+                          "8.0"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/action/targets>
+                <http://microrts.com/game/unit/1>;
+        <http://microrts.com/game/action/targetsDistance>
+                "adjacent";
+        <http://microrts.com/game/action/targetsPlayer>
+                "friendly" .
+
+<http://microrts.com/game/rating/minDamageBad>
+        a       <http://microrts.com/game/rating/Rating>;
+        <http://microrts.com/game/rating/describes>
+                <http://microrts.com/game/action/5>;
+        <http://microrts.com/game/rating/rankedBy>
+                <http://microrts.com/game/unit/6> , <http://microrts.com/game/unit/3> .
+
+<http://microrts.com/game/rating/attackTimeMedium>
+        a       <http://microrts.com/game/rating/Rating>;
+        <http://microrts.com/game/rating/describes>
+                <http://microrts.com/game/action/5>;
+        <http://microrts.com/game/rating/rankedBy>
+                <http://microrts.com/game/unit/6> , <http://microrts.com/game/unit/5> , <http://microrts.com/game/unit/4> , <http://microrts.com/game/unit/3> .
+
+<http://microrts.com/game/rating/maxDamageGood>
+        a       <http://microrts.com/game/rating/Rating>;
+        <http://microrts.com/game/rating/describes>
+                <http://microrts.com/game/action/5>;
+        <http://microrts.com/game/rating/rankedBy>
+                <http://microrts.com/game/unit/5> .
+
+<http://microrts.com/game/rating/produceTimeBad>
+        a       <http://microrts.com/game/rating/Rating>;
+        <http://microrts.com/game/rating/describesInCreatedBy>
+                <http://microrts.com/game/action/4>;
+        <http://microrts.com/game/rating/rankedBy>
+                <http://microrts.com/game/unit/5> , <http://microrts.com/game/unit/2> , <http://microrts.com/game/unit/1> .
+
+<http://microrts.com/game/unit/6>
+        a       <http://microrts.com/game/unit/Unit>;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Ranged";
+        <http://microrts.com/game/unit/aimsAt>
+                [ <http://microrts.com/game/unit/priority>
+                          "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                  <http://microrts.com/game/unit/relation>
+                          "enemy";
+                  <http://microrts.com/game/unit/weight>
+                          "3.0"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/aimsAt>
+                [ <http://microrts.com/game/unit/priority>
+                          "0"^^<http://www.w3.org/2001/XMLSchema#long>;
+                  <http://microrts.com/game/unit/range>
+                          "5"^^<http://www.w3.org/2001/XMLSchema#long>;
+                  <http://microrts.com/game/unit/relation>
+                          "enemy";
+                  <http://microrts.com/game/unit/weight>
+                          "5.0"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/aimsAt>
+                [ <http://microrts.com/game/unit/priority>
+                          "1"^^<http://www.w3.org/2001/XMLSchema#long>;
+                  <http://microrts.com/game/unit/relation>
+                          "enemy";
+                  <http://microrts.com/game/unit/unit>
+                          <http://microrts.com/game/unit/1>;
+                  <http://microrts.com/game/unit/weight>
+                          "3.5"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/createdBy>
+                <http://microrts.com/game/action/4>;
+        <http://microrts.com/game/unit/does>
+                <http://microrts.com/game/action/5> , <http://microrts.com/game/action/0> , <http://microrts.com/game/action/1>;
+        <http://microrts.com/game/unit/hasAttackRange>
+                "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasAttackTime>
+                "5"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasCost>
+                "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasHp>
+                "1"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasMaxDamage>
+                "1"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasMinDamage>
+                "1"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasMoveTime>
+                "10"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasProduceTime>
+                "100"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/includedBy>
+                <http://microrts.com/game/mainGame>;
+        <http://microrts.com/game/unit/isResource>
+                false;
+        <http://microrts.com/game/unit/isStockpile>
+                false;
+        <http://microrts.com/game/unit/prefers>
+                [ <http://microrts.com/game/unit/fraction>
+                          "0.1"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/how>
+                          "below";
+                  <http://microrts.com/game/unit/relation>
+                          "friendly";
+                  <http://microrts.com/game/unit/reverseWeight>
+                          "0.0"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/unit>
+                          <http://microrts.com/game/unit/6>;
+                  <http://microrts.com/game/unit/weight>
+                          "0.5"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/prefers>
+                [ <http://microrts.com/game/unit/fraction>
+                          "0.3"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/how>
+                          "below";
+                  <http://microrts.com/game/unit/relation>
+                          "enemy";
+                  <http://microrts.com/game/unit/reverseWeight>
+                          "0.0"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/unit>
+                          <http://microrts.com/game/unit/4>;
+                  <http://microrts.com/game/unit/weight>
+                          "0.8"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/prefers>
+                [ <http://microrts.com/game/unit/fraction>
+                          "0.5"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/how>
+                          "over";
+                  <http://microrts.com/game/unit/relation>
+                          "enemy";
+                  <http://microrts.com/game/unit/reverseWeight>
+                          "0.0"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/unit>
+                          <http://microrts.com/game/unit/3>;
+                  <http://microrts.com/game/unit/weight>
+                          "1.0"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/prefers>
+                [ <http://microrts.com/game/unit/fraction>
+                          "0.15"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/how>
+                          "over";
+                  <http://microrts.com/game/unit/relation>
+                          "enemy";
+                  <http://microrts.com/game/unit/reverseWeight>
+                          "0.0"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/unit>
+                          <http://microrts.com/game/unit/5>;
+                  <http://microrts.com/game/unit/weight>
+                          "0.5"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/producedBy>
+                <http://microrts.com/game/unit/2>;
+        <http://microrts.com/game/unit/ranks>
+                <http://microrts.com/game/rating/costGood> , <http://microrts.com/game/rating/produceTimeGood> , <http://microrts.com/game/rating/attackRangeGood> , <http://microrts.com/game/rating/minDamageBad> , <http://microrts.com/game/rating/hpBad> , <http://microrts.com/game/rating/maxDamageBad> , <http://microrts.com/game/rating/attackTimeMedium> , <http://microrts.com/game/rating/moveTimeBad>;
+        <http://microrts.com/game/unit/targetedBy>
+                <http://microrts.com/game/action/5> .
+
+<http://microrts.com/game/rating/maxDamageBad>
+        a       <http://microrts.com/game/rating/Rating>;
+        <http://microrts.com/game/rating/describes>
+                <http://microrts.com/game/action/5>;
+        <http://microrts.com/game/rating/rankedBy>
+                <http://microrts.com/game/unit/6> , <http://microrts.com/game/unit/3> .
+
+<http://microrts.com/game/rating/moveTimeGood>
+        a       <http://microrts.com/game/rating/Rating>;
+        <http://microrts.com/game/rating/describes>
+                <http://microrts.com/game/action/1>;
+        <http://microrts.com/game/rating/rankedBy>
+                <http://microrts.com/game/unit/4> .
+
+<http://microrts.com/game/rating/costBad>
+        a       <http://microrts.com/game/rating/Rating>;
+        <http://microrts.com/game/rating/describesInCreatedBy>
+                <http://microrts.com/game/action/4>;
+        <http://microrts.com/game/rating/rankedBy>
+                <http://microrts.com/game/unit/2> , <http://microrts.com/game/unit/1> .
+
+<http://microrts.com/game/unit/1>
+        a       <http://microrts.com/game/unit/Unit>;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Base";
+        <http://microrts.com/game/unit/aimsAt>
+                [ <http://microrts.com/game/unit/priority>
+                          "0"^^<http://www.w3.org/2001/XMLSchema#long>;
+                  <http://microrts.com/game/unit/relation>
+                          "neutral";
+                  <http://microrts.com/game/unit/unit>
+                          <http://microrts.com/game/unit/0>;
+                  <http://microrts.com/game/unit/weight>
+                          "1.0"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/createdBy>
+                <http://microrts.com/game/action/4>;
+        <http://microrts.com/game/unit/does>
+                <http://microrts.com/game/action/4> , <http://microrts.com/game/action/0>;
+        <http://microrts.com/game/unit/hasCost>
+                "10"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasHp>
+                "10"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasProduceTime>
+                "250"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/includedBy>
+                <http://microrts.com/game/mainGame>;
+        <http://microrts.com/game/unit/isResource>
+                false;
+        <http://microrts.com/game/unit/isStockpile>
+                true;
+        <http://microrts.com/game/unit/prefers>
+                [ <http://microrts.com/game/unit/fraction>
+                          "0.0"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/how>
+                          "below";
+                  <http://microrts.com/game/unit/relation>
+                          "friendly";
+                  <http://microrts.com/game/unit/reverseWeight>
+                          "3.0"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/unit>
+                          <http://microrts.com/game/unit/1>;
+                  <http://microrts.com/game/unit/weight>
+                          "4.0"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/producedBy>
+                <http://microrts.com/game/unit/3>;
+        <http://microrts.com/game/unit/produces>
+                <http://microrts.com/game/unit/3>;
+        <http://microrts.com/game/unit/ranks>
+                <http://microrts.com/game/rating/costBad> , <http://microrts.com/game/rating/hpGood> , <http://microrts.com/game/rating/produceTimeBad>;
+        <http://microrts.com/game/unit/targetedBy>
+                <http://microrts.com/game/action/5> , <http://microrts.com/game/action/3> .
+
+<http://microrts.com/game/action/5>
+        a       <http://microrts.com/game/action/Action>;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "if there's a unit in the specified location, damages it";
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "attack_location";
+        <http://microrts.com/game/action/describedBy>
+                <http://microrts.com/game/rating/minDamageBad> , <http://microrts.com/game/rating/minDamageMedium> , <http://microrts.com/game/rating/maxDamageMedium> , <http://microrts.com/game/rating/attackRangeGood> , <http://microrts.com/game/rating/minDamageGood> , <http://microrts.com/game/rating/maxDamageGood> , <http://microrts.com/game/rating/attackTimeMedium> , <http://microrts.com/game/rating/attackRangeBad> , <http://microrts.com/game/rating/maxDamageBad>;
+        <http://microrts.com/game/action/doneBy>
+                <http://microrts.com/game/unit/3> , <http://microrts.com/game/unit/4> , <http://microrts.com/game/unit/5> , <http://microrts.com/game/unit/6>;
+        <http://microrts.com/game/action/includedBy>
+                <http://microrts.com/game/mainGame>;
+        <http://microrts.com/game/action/prefers>
+                [ <http://microrts.com/game/action/in>
+                          "target";
+                  <http://microrts.com/game/action/statistic>
+                          "unit";
+                  <http://microrts.com/game/action/value>
+                          <http://microrts.com/game/unit/1>;
+                  <http://microrts.com/game/action/weight>
+                          "2.0"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/action/prefers>
+                [ <http://microrts.com/game/action/in>
+                          "self";
+                  <http://microrts.com/game/action/statistic>
+                          "unit";
+                  <http://microrts.com/game/action/value>
+                          <http://microrts.com/game/unit/3>;
+                  <http://microrts.com/game/action/weight>
+                          "4.5"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/action/prefers>
+                [ <http://microrts.com/game/action/in>
+                          "self";
+                  <http://microrts.com/game/action/statistic>
+                          "unit";
+                  <http://microrts.com/game/action/value>
+                          <http://microrts.com/game/unit/4>;
+                  <http://microrts.com/game/action/weight>
+                          "0.6"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/action/prefers>
+                [ <http://microrts.com/game/action/in>
+                          "self";
+                  <http://microrts.com/game/action/statistic>
+                          "unit";
+                  <http://microrts.com/game/action/value>
+                          <http://microrts.com/game/unit/4>;
+                  <http://microrts.com/game/action/weight>
+                          "4.5"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/action/prefers>
+                [ <http://microrts.com/game/action/in>
+                          "target";
+                  <http://microrts.com/game/action/statistic>
+                          "action";
+                  <http://microrts.com/game/action/value>
+                          <http://microrts.com/game/action/3>;
+                  <http://microrts.com/game/action/weight>
+                          "0.5"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/action/prefers>
+                [ <http://microrts.com/game/action/in>
+                          "self";
+                  <http://microrts.com/game/action/statistic>
+                          "unit";
+                  <http://microrts.com/game/action/value>
+                          <http://microrts.com/game/unit/6>;
+                  <http://microrts.com/game/action/weight>
+                          "0.6"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/action/prefers>
+                [ <http://microrts.com/game/action/in>
+                          "self";
+                  <http://microrts.com/game/action/statistic>
+                          "unit";
+                  <http://microrts.com/game/action/value>
+                          <http://microrts.com/game/unit/5>;
+                  <http://microrts.com/game/action/weight>
+                          "0.6"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/action/prefers>
+                [ <http://microrts.com/game/action/in>
+                          "self";
+                  <http://microrts.com/game/action/statistic>
+                          "hp";
+                  <http://microrts.com/game/action/value>
+                          "high";
+                  <http://microrts.com/game/action/weight>
+                          "1.0"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/action/prefers>
+                [ <http://microrts.com/game/action/in>
+                          "target";
+                  <http://microrts.com/game/action/statistic>
+                          "hp";
+                  <http://microrts.com/game/action/value>
+                          "low";
+                  <http://microrts.com/game/action/weight>
+                          "1.0"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/action/prefers>
+                [ <http://microrts.com/game/action/in>
+                          "target";
+                  <http://microrts.com/game/action/statistic>
+                          "action";
+                  <http://microrts.com/game/action/value>
+                          <http://microrts.com/game/action/4>;
+                  <http://microrts.com/game/action/weight>
+                          "0.5"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/action/prefers>
+                [ <http://microrts.com/game/action/in>
+                          "self";
+                  <http://microrts.com/game/action/statistic>
+                          "unit";
+                  <http://microrts.com/game/action/value>
+                          <http://microrts.com/game/unit/5>;
+                  <http://microrts.com/game/action/weight>
+                          "4.5"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/action/prefers>
+                [ <http://microrts.com/game/action/in>
+                          "target";
+                  <http://microrts.com/game/action/statistic>
+                          "unit";
+                  <http://microrts.com/game/action/value>
+                          <http://microrts.com/game/unit/6>;
+                  <http://microrts.com/game/action/weight>
+                          "1.0"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/action/prefers>
+                [ <http://microrts.com/game/action/in>
+                          "target";
+                  <http://microrts.com/game/action/statistic>
+                          "action";
+                  <http://microrts.com/game/action/value>
+                          <http://microrts.com/game/action/2>;
+                  <http://microrts.com/game/action/weight>
+                          "0.5"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/action/prefers>
+                [ <http://microrts.com/game/action/in>
+                          "target";
+                  <http://microrts.com/game/action/statistic>
+                          "unit";
+                  <http://microrts.com/game/action/value>
+                          <http://microrts.com/game/unit/3>;
+                  <http://microrts.com/game/action/weight>
+                          "1.0"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/action/prefers>
+                [ <http://microrts.com/game/action/in>
+                          "target";
+                  <http://microrts.com/game/action/statistic>
+                          "resources";
+                  <http://microrts.com/game/action/value>
+                          "high";
+                  <http://microrts.com/game/action/weight>
+                          "0.4"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/action/prefers>
+                [ <http://microrts.com/game/action/in>
+                          "self";
+                  <http://microrts.com/game/action/statistic>
+                          "unit";
+                  <http://microrts.com/game/action/value>
+                          <http://microrts.com/game/unit/6>;
+                  <http://microrts.com/game/action/weight>
+                          "4.5"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/action/targets>
+                <http://microrts.com/game/unit/5> , <http://microrts.com/game/unit/3> , <http://microrts.com/game/unit/2> , <http://microrts.com/game/unit/1> , <http://microrts.com/game/unit/6> , <http://microrts.com/game/unit/4>;
+        <http://microrts.com/game/action/targetsDistance>
+                "distant";
+        <http://microrts.com/game/action/targetsPlayer>
+                "enemy" .
+
+<http://microrts.com/game/rating/harvestTimeMedium>
+        a       <http://microrts.com/game/rating/Rating>;
+        <http://microrts.com/game/rating/describes>
+                <http://microrts.com/game/action/2>;
+        <http://microrts.com/game/rating/rankedBy>
+                <http://microrts.com/game/unit/3> .
+
+<http://microrts.com/game/action/0>
+        a       <http://microrts.com/game/action/Action>;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "no action is taken";
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "wait";
+        <http://microrts.com/game/action/doneBy>
+                <http://microrts.com/game/unit/5> , <http://microrts.com/game/unit/3> , <http://microrts.com/game/unit/6> , <http://microrts.com/game/unit/4> , <http://microrts.com/game/unit/0> , <http://microrts.com/game/unit/1> , <http://microrts.com/game/unit/2>;
+        <http://microrts.com/game/action/includedBy>
+                <http://microrts.com/game/mainGame>;
+        <http://microrts.com/game/action/prefers>
+                [ <http://microrts.com/game/action/in>
+                          "self";
+                  <http://microrts.com/game/action/statistic>
+                          "unit";
+                  <http://microrts.com/game/action/value>
+                          <http://microrts.com/game/unit/6>;
+                  <http://microrts.com/game/action/weight>
+                          "0.2"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/action/targetsDistance>
+                "self";
+        <http://microrts.com/game/action/targetsPlayer>
+                "self" .
+
+<http://microrts.com/game/unit/3>
+        a       <http://microrts.com/game/unit/Unit>;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Worker";
+        <http://microrts.com/game/unit/aimsAt>
+                [ <http://microrts.com/game/unit/if>
+                          [ <http://microrts.com/game/unit/statistic>
+                                    "resources";
+                            <http://microrts.com/game/unit/value>
+                                    "low"
+                          ];
+                  <http://microrts.com/game/unit/priority>
+                          "0"^^<http://www.w3.org/2001/XMLSchema#long>;
+                  <http://microrts.com/game/unit/range>
+                          "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                  <http://microrts.com/game/unit/relation>
+                          "neutral";
+                  <http://microrts.com/game/unit/unit>
+                          <http://microrts.com/game/unit/0>;
+                  <http://microrts.com/game/unit/weight>
+                          "5.0"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/aimsAt>
+                [ <http://microrts.com/game/unit/priority>
+                          "4"^^<http://www.w3.org/2001/XMLSchema#long>;
+                  <http://microrts.com/game/unit/relation>
+                          "enemy";
+                  <http://microrts.com/game/unit/weight>
+                          "3.0"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/aimsAt>
+                [ <http://microrts.com/game/unit/priority>
+                          "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                  <http://microrts.com/game/unit/relation>
+                          "enemy";
+                  <http://microrts.com/game/unit/unit>
+                          <http://microrts.com/game/unit/1>;
+                  <http://microrts.com/game/unit/weight>
+                          "3.5"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/aimsAt>
+                [ <http://microrts.com/game/unit/if>
+                          [ <http://microrts.com/game/unit/statistic>
+                                    "resources";
+                            <http://microrts.com/game/unit/value>
+                                    "high"
+                          ];
+                  <http://microrts.com/game/unit/priority>
+                          "0"^^<http://www.w3.org/2001/XMLSchema#long>;
+                  <http://microrts.com/game/unit/range>
+                          "4"^^<http://www.w3.org/2001/XMLSchema#long>;
+                  <http://microrts.com/game/unit/relation>
+                          "friendly";
+                  <http://microrts.com/game/unit/unit>
+                          <http://microrts.com/game/unit/1>;
+                  <http://microrts.com/game/unit/weight>
+                          "5.0"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/aimsAt>
+                [ <http://microrts.com/game/unit/if>
+                          [ <http://microrts.com/game/unit/statistic>
+                                    "resources";
+                            <http://microrts.com/game/unit/value>
+                                    "low"
+                          ];
+                  <http://microrts.com/game/unit/priority>
+                          "1"^^<http://www.w3.org/2001/XMLSchema#long>;
+                  <http://microrts.com/game/unit/range>
+                          "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                  <http://microrts.com/game/unit/relation>
+                          "friendly";
+                  <http://microrts.com/game/unit/unit>
+                          <http://microrts.com/game/unit/3>;
+                  <http://microrts.com/game/unit/weight>
+                          "2.0"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/aimsAt>
+                [ <http://microrts.com/game/unit/priority>
+                          "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                  <http://microrts.com/game/unit/range>
+                          "3"^^<http://www.w3.org/2001/XMLSchema#long>;
+                  <http://microrts.com/game/unit/relation>
+                          "enemy";
+                  <http://microrts.com/game/unit/weight>
+                          "5.0"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/createdBy>
+                <http://microrts.com/game/action/4>;
+        <http://microrts.com/game/unit/does>
+                <http://microrts.com/game/action/1> , <http://microrts.com/game/action/2> , <http://microrts.com/game/action/3> , <http://microrts.com/game/action/4> , <http://microrts.com/game/action/5> , <http://microrts.com/game/action/0>;
+        <http://microrts.com/game/unit/hasAttackRange>
+                "1"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasAttackTime>
+                "5"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasCost>
+                "1"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasHarvestAmount>
+                "1"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasHarvestTime>
+                "20"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasHp>
+                "1"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasMaxDamage>
+                "1"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasMinDamage>
+                "1"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasMoveTime>
+                "10"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasProduceTime>
+                "50"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasReturnTime>
+                "10"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/includedBy>
+                <http://microrts.com/game/mainGame>;
+        <http://microrts.com/game/unit/isResource>
+                false;
+        <http://microrts.com/game/unit/isStockpile>
+                false;
+        <http://microrts.com/game/unit/prefers>
+                [ <http://microrts.com/game/unit/fraction>
+                          "0.01"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/how>
+                          "over";
+                  <http://microrts.com/game/unit/relation>
+                          "friendly";
+                  <http://microrts.com/game/unit/reverseWeight>
+                          "6.0"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/unit>
+                          <http://microrts.com/game/unit/2>;
+                  <http://microrts.com/game/unit/weight>
+                          "1.0"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/prefers>
+                [ <http://microrts.com/game/unit/fraction>
+                          "0.5"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/how>
+                          "below";
+                  <http://microrts.com/game/unit/relation>
+                          "friendly";
+                  <http://microrts.com/game/unit/reverseWeight>
+                          "1.0"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/unit>
+                          <http://microrts.com/game/unit/3>;
+                  <http://microrts.com/game/unit/weight>
+                          "4.0"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/producedBy>
+                <http://microrts.com/game/unit/1>;
+        <http://microrts.com/game/unit/produces>
+                <http://microrts.com/game/unit/2> , <http://microrts.com/game/unit/1>;
+        <http://microrts.com/game/unit/ranks>
+                <http://microrts.com/game/rating/harvestTimeMedium> , <http://microrts.com/game/rating/attackRangeBad> , <http://microrts.com/game/rating/minDamageBad> , <http://microrts.com/game/rating/attackTimeMedium> , <http://microrts.com/game/rating/returnTimeMedium> , <http://microrts.com/game/rating/harvestAmountMedium> , <http://microrts.com/game/rating/moveTimeBad> , <http://microrts.com/game/rating/hpBad> , <http://microrts.com/game/rating/costGood> , <http://microrts.com/game/rating/maxDamageBad> , <http://microrts.com/game/rating/produceTimeGood>;
+        <http://microrts.com/game/unit/targetedBy>
+                <http://microrts.com/game/action/5> .
+
+<http://microrts.com/game/mainGame>
+        a       <http://microrts.com/game/Game>;
+        <http://microrts.com/game/hasMaxAttackRange>
+                "3"^^<http://www.w3.org/2001/XMLSchema#int>;
+        <http://microrts.com/game/hasMoveConflictResolutionStrategy>
+                "cancel both";
+        <http://microrts.com/game/includes>
+                <http://microrts.com/game/action/0> , <http://microrts.com/game/action/3> , <http://microrts.com/game/unit/6> , <http://microrts.com/game/unit/2> , <http://microrts.com/game/unit/5> , <http://microrts.com/game/action/2> , <http://microrts.com/game/unit/1> , <http://microrts.com/game/action/5> , <http://microrts.com/game/action/1> , <http://microrts.com/game/unit/4> , <http://microrts.com/game/unit/0> , <http://microrts.com/game/action/4> , <http://microrts.com/game/unit/3> .
+
+<http://microrts.com/game/rating/costGood>
+        a       <http://microrts.com/game/rating/Rating>;
+        <http://microrts.com/game/rating/describesInCreatedBy>
+                <http://microrts.com/game/action/4>;
+        <http://microrts.com/game/rating/rankedBy>
+                <http://microrts.com/game/unit/6> , <http://microrts.com/game/unit/5> , <http://microrts.com/game/unit/4> , <http://microrts.com/game/unit/3> .
+
+<http://microrts.com/game/rating/harvestAmountMedium>
+        a       <http://microrts.com/game/rating/Rating>;
+        <http://microrts.com/game/rating/describes>
+                <http://microrts.com/game/action/2>;
+        <http://microrts.com/game/rating/rankedBy>
+                <http://microrts.com/game/unit/3> .
+
+<http://microrts.com/game/rating/attackRangeBad>
+        a       <http://microrts.com/game/rating/Rating>;
+        <http://microrts.com/game/rating/describes>
+                <http://microrts.com/game/action/5>;
+        <http://microrts.com/game/rating/rankedBy>
+                <http://microrts.com/game/unit/5> , <http://microrts.com/game/unit/4> , <http://microrts.com/game/unit/3> .
+
+<http://microrts.com/game/action/2>
+        a       <http://microrts.com/game/action/Action>;
+        <http://www.w3.org/2000/01/rdf-schema#comment>
+                "attempts to harvest from a resource in the specified direction";
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "harvest";
+        <http://microrts.com/game/action/describedBy>
+                <http://microrts.com/game/rating/harvestTimeMedium> , <http://microrts.com/game/rating/harvestAmountMedium>;
+        <http://microrts.com/game/action/doneBy>
+                <http://microrts.com/game/unit/3>;
+        <http://microrts.com/game/action/includedBy>
+                <http://microrts.com/game/mainGame>;
+        <http://microrts.com/game/action/needs>
+                [ <http://microrts.com/game/action/in>
+                          "self";
+                  <http://microrts.com/game/action/statistic>
+                          "resources";
+                  <http://microrts.com/game/action/value>
+                          "low"
+                ];
+        <http://microrts.com/game/action/prefers>
+                [ <http://microrts.com/game/action/in>
+                          "self";
+                  <http://microrts.com/game/action/statistic>
+                          "unit";
+                  <http://microrts.com/game/action/value>
+                          <http://microrts.com/game/unit/3>;
+                  <http://microrts.com/game/action/weight>
+                          "0.2"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/action/prefers>
+                [ <http://microrts.com/game/action/in>
+                          "self";
+                  <http://microrts.com/game/action/statistic>
+                          "resources";
+                  <http://microrts.com/game/action/value>
+                          "low";
+                  <http://microrts.com/game/action/weight>
+                          "5.0"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/action/targets>
+                <http://microrts.com/game/unit/0>;
+        <http://microrts.com/game/action/targetsDistance>
+                "adjacent";
+        <http://microrts.com/game/action/targetsPlayer>
+                "neutral" .
+
+<http://microrts.com/game/rating/minDamageGood>
+        a       <http://microrts.com/game/rating/Rating>;
+        <http://microrts.com/game/rating/describes>
+                <http://microrts.com/game/action/5>;
+        <http://microrts.com/game/rating/rankedBy>
+                <http://microrts.com/game/unit/5> .
+
+<http://microrts.com/game/unit/5>
+        a       <http://microrts.com/game/unit/Unit>;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Heavy";
+        <http://microrts.com/game/unit/aimsAt>
+                [ <http://microrts.com/game/unit/priority>
+                          "1"^^<http://www.w3.org/2001/XMLSchema#long>;
+                  <http://microrts.com/game/unit/relation>
+                          "enemy";
+                  <http://microrts.com/game/unit/unit>
+                          <http://microrts.com/game/unit/1>;
+                  <http://microrts.com/game/unit/weight>
+                          "3.5"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/aimsAt>
+                [ <http://microrts.com/game/unit/priority>
+                          "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+                  <http://microrts.com/game/unit/relation>
+                          "enemy";
+                  <http://microrts.com/game/unit/weight>
+                          "3.0"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/aimsAt>
+                [ <http://microrts.com/game/unit/priority>
+                          "0"^^<http://www.w3.org/2001/XMLSchema#long>;
+                  <http://microrts.com/game/unit/range>
+                          "4"^^<http://www.w3.org/2001/XMLSchema#long>;
+                  <http://microrts.com/game/unit/relation>
+                          "enemy";
+                  <http://microrts.com/game/unit/weight>
+                          "5.0"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/createdBy>
+                <http://microrts.com/game/action/4>;
+        <http://microrts.com/game/unit/does>
+                <http://microrts.com/game/action/5> , <http://microrts.com/game/action/0> , <http://microrts.com/game/action/1>;
+        <http://microrts.com/game/unit/hasAttackRange>
+                "1"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasAttackTime>
+                "5"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasCost>
+                "2"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasHp>
+                "4"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasMaxDamage>
+                "4"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasMinDamage>
+                "4"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasMoveTime>
+                "12"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/hasProduceTime>
+                "120"^^<http://www.w3.org/2001/XMLSchema#long>;
+        <http://microrts.com/game/unit/includedBy>
+                <http://microrts.com/game/mainGame>;
+        <http://microrts.com/game/unit/isResource>
+                false;
+        <http://microrts.com/game/unit/isStockpile>
+                false;
+        <http://microrts.com/game/unit/prefers>
+                [ <http://microrts.com/game/unit/fraction>
+                          "0.5"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/how>
+                          "over";
+                  <http://microrts.com/game/unit/relation>
+                          "friendly";
+                  <http://microrts.com/game/unit/reverseWeight>
+                          "0.0"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/unit>
+                          <http://microrts.com/game/unit/3>;
+                  <http://microrts.com/game/unit/weight>
+                          "0.5"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/prefers>
+                [ <http://microrts.com/game/unit/fraction>
+                          "0.25"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/how>
+                          "over";
+                  <http://microrts.com/game/unit/relation>
+                          "enemy";
+                  <http://microrts.com/game/unit/reverseWeight>
+                          "0.0"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/unit>
+                          <http://microrts.com/game/unit/4>;
+                  <http://microrts.com/game/unit/weight>
+                          "0.5"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/prefers>
+                [ <http://microrts.com/game/unit/fraction>
+                          "0.1"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/how>
+                          "below";
+                  <http://microrts.com/game/unit/relation>
+                          "friendly";
+                  <http://microrts.com/game/unit/reverseWeight>
+                          "0.0"^^<http://www.w3.org/2001/XMLSchema#double>;
+                  <http://microrts.com/game/unit/unit>
+                          <http://microrts.com/game/unit/5>;
+                  <http://microrts.com/game/unit/weight>
+                          "0.5"^^<http://www.w3.org/2001/XMLSchema#double>
+                ];
+        <http://microrts.com/game/unit/producedBy>
+                <http://microrts.com/game/unit/2>;
+        <http://microrts.com/game/unit/ranks>
+                <http://microrts.com/game/rating/moveTimeBad> , <http://microrts.com/game/rating/costGood> , <http://microrts.com/game/rating/produceTimeBad> , <http://microrts.com/game/rating/attackRangeBad> , <http://microrts.com/game/rating/hpMedium> , <http://microrts.com/game/rating/minDamageGood> , <http://microrts.com/game/rating/maxDamageGood> , <http://microrts.com/game/rating/attackTimeMedium>;
+        <http://microrts.com/game/unit/targetedBy>
+                <http://microrts.com/game/action/5> .
+
+<http://microrts.com/game/rating/moveTimeBad>
+        a       <http://microrts.com/game/rating/Rating>;
+        <http://microrts.com/game/rating/describes>
+                <http://microrts.com/game/action/1>;
+        <http://microrts.com/game/rating/rankedBy>
+                <http://microrts.com/game/unit/6> , <http://microrts.com/game/unit/5> , <http://microrts.com/game/unit/3> .
+
+<http://microrts.com/game/rating/maxDamageMedium>
+        a       <http://microrts.com/game/rating/Rating>;
+        <http://microrts.com/game/rating/describes>
+                <http://microrts.com/game/action/5>;
+        <http://microrts.com/game/rating/rankedBy>
+                <http://microrts.com/game/unit/4> .
+
+<http://microrts.com/game/unit/0>
+        a       <http://microrts.com/game/unit/Unit>;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "Resource";
+        <http://microrts.com/game/unit/does>
+                <http://microrts.com/game/action/0>;
+        <http://microrts.com/game/unit/includedBy>
+                <http://microrts.com/game/mainGame>;
+        <http://microrts.com/game/unit/isResource>
+                true;
+        <http://microrts.com/game/unit/isStockpile>
+                false;
+        <http://microrts.com/game/unit/targetedBy>
+                <http://microrts.com/game/action/2> .
