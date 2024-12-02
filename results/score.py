@@ -6,9 +6,9 @@ import pandas as pd
 
 class Scorer:
     class Score:
-        def __init__(self, experiment: str, group: str, directory="base", experiments_path=os.path.join(".", "..", "experiments"), metric="trueskill"):
+        def __init__(self, experiment: str, group: str, directory="base", experiments_path=os.path.join(".", "..", "experiments"), metric="trueskill", runs="runs"):
             self.experiment = experiment
-            self.experiment_dir = os.path.join(experiments_path, directory, "runs", experiment)
+            self.experiment_dir = os.path.join(experiments_path, directory, runs, experiment)
             self.group = group
             self.metric = metric
             self.score_df = self._get_score_df()
@@ -43,10 +43,11 @@ class Scorer:
             self.add_score(experiment, group, **score_kwargs)
         return self
 
-    def add_all_scores_dir(self, directory: str, group: str, experiments_path=os.path.join(".", "..", "final_results"), **score_kwargs) -> 'Scorer':
+    def add_all_scores_dir(self, directory: str, group: str, experiments_path=os.path.join(".", "..", "final_results"), runs="runs", **score_kwargs) -> 'Scorer':
         score_kwargs["directory"] = directory
         score_kwargs["experiments_path"] = experiments_path
-        for experiment in os.listdir(os.path.join(experiments_path, directory, "runs")):
+        score_kwargs["runs"] = runs
+        for experiment in os.listdir(os.path.join(experiments_path, directory, runs)):
             self.add_score(experiment, group, **score_kwargs)
         return self
 
