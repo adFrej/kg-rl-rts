@@ -1,6 +1,7 @@
 import os
 
 import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
 import pandas as pd
 
 
@@ -30,6 +31,7 @@ class Scorer:
         self.metric = metric
         self.scores: list[Scorer.Score] = []
         self.scores_avg: dict[str, pd.DataFrame] = {}
+        self.flat_score = None
 
     def add_score(self, experiment: str, group: str, **score_kwargs) -> 'Scorer':
         score = self.Score(experiment, group, **score_kwargs)
@@ -49,6 +51,10 @@ class Scorer:
         score_kwargs["runs"] = runs
         for experiment in os.listdir(os.path.join(experiments_path, directory, runs)):
             self.add_score(experiment, group, **score_kwargs)
+        return self
+
+    def add_flat_score(self, score: float, name: str) -> 'Scorer':
+        self.flat_score = {"score": score, "name": name}
         return self
 
     def get_group(self, group: str) -> list['Scorer.Score']:
@@ -80,7 +86,7 @@ class Scorer:
             self.scores_avg[group] = result
         return self
 
-    def draw_avg(self, title: str, step_limit: float = None, x_line: float = None, y_line: float = None, file: str = None, file_dir="plots") -> 'Scorer':
+    def draw_avg(self, title: str, step_limit: float = None, colors: dict[str, str] = None, x_line: float = None, y_line: float = None, file: str = None, file_dir="plots") -> 'Scorer':
         self.average_scores()
         df = None
         for group, score in self.scores_avg.items():
@@ -94,8 +100,20 @@ class Scorer:
                 if df.isnull().values.any():
                     raise ValueError("Missing values in scores detected. Probably interpolation failed.")
                 # df = df.fillna((df.ffill() + df.bfill()) / 2)
-        df.plot(x="time", y=[group for group in self.scores_avg.keys()], color={k: f"C{i}" for i, k in enumerate(self.scores_avg.keys())}, title=title)
-        if len(self.scores_avg) == 1:
+        if colors is None:
+            colors = {k: f"C{i+1}" for i, k in enumerate(self.scores_avg.keys())}
+        df.plot(x="time", y=[group for group in self.scores_avg.keys()], color=colors, title=title)
+        if self.flat_score is not None:
+            handles, labels = plt.gca().get_legend_handles_labels()
+            y_handle = Line2D([0], [0])
+            y_handle.update_from(handles[0])
+            y_handle.set_color('C0')
+            handles = [y_handle] + handles
+            labels = [self.flat_score["name"]] + labels
+            plt.legend(handles=handles, labels=labels)
+            plt.axhline(y=self.flat_score["score"], color='C0')
+            plt.yticks(list(plt.yticks()[0][1:-1]) + [self.flat_score["score"]])
+        elif len(self.scores_avg) == 1:
             plt.legend([])
         # else:
         #     plt.legend(loc='lower right', bbox_to_anchor=(1.3, 0.03))
