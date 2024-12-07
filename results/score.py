@@ -7,20 +7,22 @@ import pandas as pd
 
 class Scorer:
     class Score:
-        def __init__(self, experiment: str, group: str, directory="base", experiments_path=os.path.join(".", "..", "experiments"), metric="trueskill", runs="runs"):
+        def __init__(self, experiment: str, group: str, limit=None, directory="base", experiments_path=os.path.join(".", "..", "experiments"), metric="trueskill", runs="runs"):
             self.experiment = experiment
             self.experiment_dir = os.path.join(experiments_path, directory, runs, experiment)
             self.group = group
             self.metric = metric
-            self.score_df = self._get_score_df()
+            self.score_df = self._get_score_df(limit)
 
-        def _get_score_df(self) -> pd.DataFrame:
+        def _get_score_df(self, limit=None) -> pd.DataFrame:
             result = []
             for file in os.listdir(self.experiment_dir):
                 if not file.endswith(".csv"):
                     continue
                 df = pd.read_csv(os.path.join(self.experiment_dir, file))
                 time = os.path.splitext(file)[0]
+                if limit is not None and int(time) > limit:
+                    continue
                 model = "models/" + self.experiment + "/" + time + ".pt"
                 result.append({"time": int(time), "score": df[df["name"] == model][self.metric].values[0]})
             result = pd.DataFrame(result)
